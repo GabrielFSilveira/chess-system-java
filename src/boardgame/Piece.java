@@ -8,7 +8,7 @@ public class Piece {
 //Para criar a peça tem que informar o board
 	public Piece(Board board) {
 		this.board = board;
-		position = null;
+		position = null; //posição da peça recém criada 
 	}
 
 	protected Board getBoard() {
