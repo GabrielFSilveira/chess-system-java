@@ -26,10 +26,11 @@ public class ChessMatch {
 		}
 		return mat;
 	}
-	
+	//Executa o movimento
 	public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
 		Position source = sourcePosition.toPosition();
 		Position target = targetPosition.toPosition();
+		//Valida a posição de origem da peça
 		validatSourcePosition(source);
 		Piece capturedPiece = makeMove(source, target);
 		return (ChessPiece)capturedPiece;
@@ -45,6 +46,10 @@ public class ChessMatch {
 	private void validatSourcePosition(Position position) {
 		if(!board.thereIsAPiece(position)) {
 			throw new ChessException("There is no piece on source position");
+		}
+		//Caso não tenha nenhum movimento possivel
+		if(!board.piece(position).isThereAnyPossibleMove()) {
+			throw new ChessException("There is no possible moves for the chosen piece");
 		}
 	}
 	
