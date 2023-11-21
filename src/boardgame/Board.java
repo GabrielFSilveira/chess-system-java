@@ -12,7 +12,7 @@ public class Board {
 		}
 		this.rows = rows;
 		this.columns = columns;
-		pieces = new Piece[rows][columns]; 
+		pieces = new Piece[rows ][columns]; 
 	}
 
 	public int getRows() {
