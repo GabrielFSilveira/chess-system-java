@@ -32,7 +32,7 @@ public class Program {
 
 
 				System.out.println();
-				System.out.print("Target: ");
+				System.out.print("\nTarget: ");
 				ChessPosition target = UI.readChessPosition(sc);
 				
 				//recebe o movimento da peça
